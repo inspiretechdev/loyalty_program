@@ -15,7 +15,7 @@ void main() {
       final brand = LoyaltyProgram.getBrandById('marriott_bonvoy');
       expect(brand, isNotNull);
       expect(brand?.name, 'Marriott Bonvoy');
-      
+
       final nonExistent = LoyaltyProgram.getBrandById('non_existent');
       expect(nonExistent, isNull);
     });
@@ -25,7 +25,10 @@ void main() {
         ProgramCategory.hotel,
       );
       expect(hotelBrands, isNotEmpty);
-      expect(hotelBrands.every((b) => b.category == ProgramCategory.hotel), isTrue);
+      expect(
+        hotelBrands.every((b) => b.category == ProgramCategory.hotel),
+        isTrue,
+      );
     });
   });
 
@@ -40,10 +43,7 @@ void main() {
     });
 
     test('QualificationPath creation and properties', () {
-      const requirement = MilestoneRequirement(
-        targetValue: 10,
-        unit: 'Nights',
-      );
+      const requirement = MilestoneRequirement(targetValue: 10, unit: 'Nights');
       const path = QualificationPath(requirements: [requirement]);
       expect(path.requirements, hasLength(1));
       expect(path.requirements.first.targetValue, 10);
@@ -53,10 +53,7 @@ void main() {
     test('LoyaltyTier creation and properties', () {
       const path = QualificationPath(
         requirements: [
-          MilestoneRequirement(
-            targetValue: 20000,
-            unit: 'Points',
-          ),
+          MilestoneRequirement(targetValue: 20000, unit: 'Points'),
         ],
       );
       const tier = LoyaltyTier(
