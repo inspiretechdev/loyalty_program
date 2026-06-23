@@ -1,7 +1,7 @@
 name: loyalty_program
 description: A pure Dart collection of global airline, hotel, and car rental loyalty programs, status tiers, and milestone requirements.
 version: 1.0.0-beta.1
-repository: https://github.com/inspiretechdev/loyalty_program
+repository: https://github.com/inspiretechdevs/loyalty_program
 
 environment:
   sdk: ^3.12.2
