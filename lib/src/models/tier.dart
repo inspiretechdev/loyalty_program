@@ -1,6 +1,6 @@
 import 'package:loyalty_program/src/models/qualification_path.dart';
 
-class LoyaltyTier {
+final class LoyaltyTier {
   /// The index order of the tier (0 = entry level, 1 = silver, etc.)
   /// Essential for calculating progress bars in the UI.
   final int level;

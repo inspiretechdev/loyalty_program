@@ -1,5 +1,4 @@
 import 'package:loyalty_program/loyalty_program.dart';
-import 'package:loyalty_program/src/models/models.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -8,13 +7,13 @@ void main() {
       final brands = LoyaltyProgram.getAllBrands();
       expect(brands, isNotEmpty);
       expect(brands.any((b) => b.id == 'marriott_bonvoy'), isTrue);
-      expect(brands.any((b) => b.id == 'national_emerald_club'), isTrue);
+      expect(brands.any((b) => b.id == 'choice_privileges'), isTrue);
     });
 
     test('getBrandById returns correct brand when it exists', () {
       final brand = LoyaltyProgram.getBrandById('marriott_bonvoy');
       expect(brand, isNotNull);
-      expect(brand?.name, 'Marriott Bonvoy');
+      expect(brand?.programName, 'Marriott Bonvoy');
 
       final nonExistent = LoyaltyProgram.getBrandById('non_existent');
       expect(nonExistent, isNull);
@@ -80,7 +79,8 @@ void main() {
       );
       const brand = LoyaltyBrand(
         id: 'test_brand',
-        name: 'Test Brand',
+        operatorName: 'Test Operator',
+        programName: 'Test Brand',
         category: ProgramCategory.hotel,
         primaryColorHex: '#FF0000',
         rewardCurrency: 'Points',
@@ -88,7 +88,8 @@ void main() {
       );
 
       expect(brand.id, 'test_brand');
-      expect(brand.name, 'Test Brand');
+      expect(brand.operatorName, 'Test Operator');
+      expect(brand.programName, 'Test Brand');
       expect(brand.category, ProgramCategory.hotel);
       expect(brand.primaryColorHex, '#FF0000');
       expect(brand.rewardCurrency, 'Points');

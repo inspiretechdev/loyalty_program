@@ -1,4 +1,4 @@
-class MilestoneRequirement {
+final class MilestoneRequirement {
   /// The target number required for milestone (10,10000,15000)
   final int targetValue;
 
@@ -9,7 +9,7 @@ class MilestoneRequirement {
 }
 
 /// Defines the path a user can take to requalify each milestone
-class QualificationPath {
+final class QualificationPath {
   ///List of requirements to meet the milestone
   ///
   ///Add additional qualification methods here
