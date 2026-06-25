@@ -14,8 +14,9 @@ const LoyaltyBrand sixtOne = LoyaltyBrand(
       name: 'Silver',
       description: 'Earn points on qualifying rental transactions.',
       keyPerks: [
-        'Up to 8% discount','Earn rental points'
-        'One free additional driver for Florida rentals',
+        'Up to 8% discount',
+        'Earn rental points'
+            'One free additional driver for Florida rentals',
         'Member-only offers',
       ],
       nextLevelPaths: [
@@ -44,7 +45,8 @@ const LoyaltyBrand sixtOne = LoyaltyBrand(
           ],
         ),
       ],
-    ),LoyaltyTier(
+    ),
+    LoyaltyTier(
       level: 1,
       name: 'Platinum',
       description: 'Unlock annual upgrade certificates automatically.',

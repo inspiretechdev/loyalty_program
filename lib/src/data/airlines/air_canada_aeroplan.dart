@@ -4,7 +4,7 @@ const LoyaltyBrand airCanadaAeroplan = LoyaltyBrand(
   id: 'air_canada_aeroplan',
   operatorName: 'Air Canada',
   programName: 'Aeroplan',
-  category: ProgramCategory.airline,  
+  category: ProgramCategory.airline,
   primaryColorHex: '#000000',
   rewardCurrency: 'Points',
   rewardLink: 'https://www.aircanada.com/us/en/aco/home/aeroplan.html',

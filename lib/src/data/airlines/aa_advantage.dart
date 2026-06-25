@@ -16,9 +16,7 @@ const LoyaltyBrand aaAdvantage = LoyaltyBrand(
         'Miles never expire',
         'Earn miles by flying or with Alaska Airlines, Hawaiian Airlines or any of our 30+ airline partners',
       ],
-      nextLevelPaths: [
-
-      ]
+      nextLevelPaths: [],
     ),
     LoyaltyTier(
       level: 0,
@@ -30,9 +28,7 @@ const LoyaltyBrand aaAdvantage = LoyaltyBrand(
         'Group 4 boarding',
         'Complimentary upgrades',
       ],
-      nextLevelPaths: [
-        
-      ]
+      nextLevelPaths: [],
     ),
     LoyaltyTier(
       level: 1,
