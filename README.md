@@ -16,6 +16,7 @@ A pure Dart collection of global airline and hotel loyalty programs, tier hierar
 - ✈️ **Multi-Category Registry:** Supports major US and global airline and hotel networks natively.
 - 🔄 **Simplified Multi-Track Milestones:** Easily models complex requirements (e.g., qualifying via nights *or* base spending) using a unified, string-based layout contract.
 - 🎨 **UI-Theming Friendly:** Every brand record includes signature hex colors to dynamically theme your Flutter widgets on the fly.
+- 🔗 **Direct Program Linking:** Each brand includes a direct URL to the official program website for easy access to current rules and rewards.
 - 📦 **Pure Dart Implementation:** Zero dependency footprint on `flutter` or other external rendering layers—meaning you can deploy this on mobile frontends, CLI tools, or Dart backends seamlessly.
 
 ## Getting Started
@@ -24,8 +25,7 @@ Add `loyalty_program` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  loyalty_program:
-    path: path/to/loyalty_program # Or ^1.0.0 once published
+  loyalty_program: ^latest_version
 ```
 
 Import the package in your Dart code:
@@ -78,10 +78,12 @@ The library provides structured Dart models to represent complex tiered layouts:
 ### `LoyaltyBrand`
 Represents a loyalty program provider.
 * `id` (`String`): Unique identifier/slug.
-* `name` (`String`): Display name.
+* `operatorName` (`String`): The name of the parent operating company (e.g., 'Marriott')
+* `programName` (`String`): Display name.
 * `category` (`ProgramCategory`): `airline`, `hotel`, or `carRental`.
 * `primaryColorHex` (`String`): Signature brand HEX color.
 * `rewardCurrency` (`String`): Name of points/miles.
+* `rewardLink` (`String?`): Link to the reward program website.
 * `tiers` (`List<LoyaltyTier>`): Ordered list of status levels.
 
 ### `LoyaltyTier`
